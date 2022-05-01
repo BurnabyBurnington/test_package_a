@@ -74,9 +74,20 @@
 <span class="kn">from</span> <span class="nn">dependency</span> <span class="kn">import</span> <span class="n">api</span>
 
 
-<div class="viewcode-block" id="do_something"><a class="viewcode-back" href="../../api/test_package_a.method_here.html#test_package_a.method_here.do_something">[docs]</a><span class="k">def</span> <span class="nf">do_something</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;Make a call to :func:`dependency.api.some_function`.&quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">some_function</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span></div>
+<div class="viewcode-block" id="do_something"><a class="viewcode-back" href="../../api/test_package_a.method_here.html#test_package_a.method_here.do_something">[docs]</a><span class="k">def</span> <span class="nf">do_something</span><span class="p">(</span><span class="n">thing</span><span class="o">=</span><span class="s2">&quot;stuff&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Make a call to :func:`dependency.api.some_function`.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        thing (str, optional): Text to either include or not include.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dependency.api.SomeObject: Some created object.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">thing</span> <span class="o">==</span> <span class="s2">&quot;stuff&quot;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">some_function</span><span class="p">(</span><span class="kc">True</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">api</span><span class="o">.</span><span class="n">SomeObject</span><span class="p">()</span></div>
 </pre></div>
 
            </div>
